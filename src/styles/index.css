@@ -1,82 +1,60 @@
-body {
-  font-style: monospace;
-  vertical-align: center; }
-
-div {
-  border-radius: .5em; }
-
-p {
-  margin: 0;
+html {
   padding: 0; }
 
-.App {
-  text-align: center;
-  padding: 1em 1em 1em 0em; }
+body {
+  padding: 0;
+  margin: 0; }
 
-.sidebarSpacing {
-  display: grid;
-  grid-column-template: 300px, auto; }
+h2 {
+  margin: 10px; }
 
 .Header {
-  background-color: lightgrey;
-  padding: 1em;
   position: fixed;
-  top: 1.5em;
-  left: 1em;
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 268px 50px auto;
-  grid-gap: 1em;
-  width: 300px;
-  min-height: 90vh; }
-  .Header > * {
-    background-color: grey; }
+  top: 0;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: black;
+  border-width: 1px;
+  color: white; }
 
-.Body {
-  margin-left: 350px;
-  padding: 1em;
-  background-color: lightgrey;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 200px);
-  grid-template-rows: repeat(auto-fill, 200px);
-  grid-auto-rows: 200px;
-  grid-gap: 1em;
-  min-height: 90vh; }
-  .Body > * {
-    background-color: grey; }
+.headerSpacing {
+  height: 40px; }
 
-.PictureCard {
-  width: auto;
-  height: 268px; }
-  .PictureCard img {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 1em;
-    grid-row: auto; }
+.titleText {
+  flex: 4;
+  order: 99;
+  width: 120px;
+  padding: 0 20px;
+  text-align: right; }
 
-.TitleCard {
-  font-size: 2em;
-  text-align: center;
-  justify-content: center; }
+.navbarLinks {
+  list-style-type: none;
+  flex: 4;
+  display: flex; }
+  .navbarLinks li {
+    flex: 1;
+    vertical-align: center;
+    text-align: center; }
 
-.NavCard {
-  font-size: 1.5em;
-  padding: .25em;
-  display: block; }
-  .NavCard .navLink {
-    border-radius: .25em;
-    background-color: white;
-    margin: 1em 0; }
+.card {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border-width: 1px;
+  border-color: black;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2); }
 
-.AboutCard {
-  font-size: 2em;
-  padding: 1em;
-  grid-column: span 4;
-  grid-row: span 3; }
+.link {
+  text-decoration: none; }
+  .link:visited {
+    text-decoration: none;
+    color: white; }
 
-.Card {
-  font-size: 2em;
-  grid-column: span 1;
-  grid-row: span 1; }
+.activeLink {
+  color: pink; }
+  .activeLink:visited {
+    color: pink; }
 
 /*# sourceMappingURL=index.css.map */
