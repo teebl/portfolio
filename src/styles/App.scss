@@ -1,0 +1,102 @@
+body {
+  font-style: monospace;
+  vertical-align: center;
+}
+
+div {
+  border-radius: .5em;
+}
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+.App {
+  text-align: center;
+  padding: 1em 1em 1em 0em;
+}
+
+.sidebarSpacing {
+  display: grid;
+  grid-column-template: 300px, auto;
+}
+
+.Header {
+  > * {
+    background-color:grey;
+  }
+  background-color: lightgrey;
+
+  padding: 1em;
+  position: fixed;
+  top: 1.5em;
+  left: 1em;
+  display:grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 268px 50px auto ;
+  grid-gap:1em;
+  width:300px;
+  min-height:90vh;
+
+}
+
+.Body{
+  margin-left: 350px;
+  padding: 1em;
+  background-color: lightgrey;
+  > * {
+    background-color:grey;
+  }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 200px);
+  grid-template-rows: repeat(auto-fill, 200px);
+  grid-auto-rows: 200px;
+  grid-gap: 1em;  
+
+  min-height: 90vh;
+}
+
+.PictureCard {
+  width:auto;
+  height:268px;
+  img {
+    max-width:100%;
+    max-height:100%;
+    border-radius: 1em;  
+    grid-row: auto;
+  }
+}
+
+.TitleCard {
+  font-size: 2em;
+  text-align:center;
+  justify-content:center;
+
+}
+
+.NavCard {
+  font-size: 1.5em;
+  padding: .25em;
+  display: block;
+  .navLink {
+    border-radius: .25em;
+    background-color: white;
+    margin: 1em 0;
+  }
+}
+
+.AboutCard{
+  font-size: 2em;
+  padding: 1em;
+  grid-column: span 4;
+  grid-row: span 3;
+
+}
+
+.Card {
+  font-size: 2em;
+  grid-column: span 1;
+  grid-row: span 1;
+
+}
