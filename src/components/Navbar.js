@@ -18,6 +18,7 @@ export default class Navbar extends Component {
 		this.setState({sidebarCollapse: !this.state.sidebarCollapse});
 		console.log('sidebarCollapse is ' + this.state.sidebarCollapse)
 	}
+// <DirectoryLink page="SKILLS" directory="/Skills" />
 
 	render() {
 
@@ -28,7 +29,7 @@ export default class Navbar extends Component {
 				<div className={"navbarLinks " + collapseClassName}>
 				<DirectoryLink page="HOME" directory="/" />
 				<DirectoryLink page="ABOUT" directory="/About" />
-				<DirectoryLink page="SKILLS" directory="/Skills" />
+				
 				<DirectoryLink page="PROJECTS" directory="/Projects" />
 				<DirectoryLink page="CONTACT" directory="/Contact" />
 				</div>

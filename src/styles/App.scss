@@ -4,27 +4,22 @@
 // Variables
 $navbar-dimension: 80px;
 
-
-// General
-
 html {
-  padding: 0;
-  min-height:100%;
   font-family: 'Raleway', serif;
-  height: 40px;
-  line-height: 170%;
 }
 
 body {
   padding:  0;
   margin: 0;
   min-height:100%;
+  line-height: 170%;
+
 }
 
 h2 {
   font-weight: lighter;
   font-size:3em;
-  margin:0;
+  margin-top: 20px;
   line-height: 150%;
 }
 
@@ -33,17 +28,13 @@ ul {
 }
 
 #root {
-  min-height:100vh;
+  height:100vh;
 }
 
 // App Component
 // ======================
 .App {
-  align-content:center;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  justify-content: space-around;
+  height: 100%;
 
 }
 
@@ -55,10 +46,6 @@ ul {
   top: 50%;
   transform: translateY(-50%);
   width: 110px;
-  display:grid;
-  align-content:center;
-  grid-template-columns: 1fr;
-  vertical-align: middle;
 }
 
 .collapseButton {
@@ -75,7 +62,6 @@ ul {
 }
 
 .navbarLinks{
-  vertical-align: center;
 }
 
 .DirectoryLink {
@@ -117,7 +103,6 @@ ul {
   .DirectoryLink{
     border-right: 3px solid black;
   }
-  background-color: red;
   &:visited{
     color:black;
   }
@@ -128,21 +113,19 @@ ul {
 //===============================================
 
 .content {
-margin: 40px 160px;
+  height:100%;
+  margin: 0px 40px 0px 150px ;
 }
 // Home Component
 // ==============================================
 
 .Home{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  margin:auto;
+  height:100%;
   display: grid;
+  margin:auto;
   grid-gap:20px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   align-items:center;
-  padding-right:160px;
 }
 
 .profilePicture {
@@ -156,8 +139,15 @@ margin: 40px 160px;
 }
 
 .homeText {
-  grid-column: span 2;
+  // grid-column: span 2;
   padding: 2px;
+}
+
+//About Component
+// ===============================
+
+.About {
+  max-width: 800px;
 }
 
 // Skills Component
@@ -168,7 +158,6 @@ margin: 40px 160px;
 }
 
 .skillsList {
-  background-color: pink;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 
@@ -221,14 +210,29 @@ margin: 40px 160px;
 // Contact Component
 // =================================
 
-// ContactIcon Component
+.Contact {
+  height:100%;
+  display: grid;
+  margin:auto;
+  grid-gap:20px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  align-items:center;
+}
+
+.ContactTitle {
+  text-align:center;
+  grid-column: span 2;
+}
+
+// Icon Component
 // =================================
 
-.ContactIcon {
-  height: 30px;
-  width: 30px;
-  background-color: red;
+.Icon {
+  &:hover {
+    fill: orange;
+    }
 }
+
 
 // Responsive table-layout
 // =================================
@@ -246,6 +250,11 @@ margin: 40px 160px;
     transform: translateY(0); 
   }
 
+  .profilePicture{
+    max-height:200px;
+    max-width:200px;
+  }
+
   .Navbar {
     position: fixed;
     transform: translateY(0);
@@ -254,6 +263,10 @@ margin: 40px 160px;
     align-content:end;
     z-index:99;
     border: 0px;
+      display:grid;
+  align-content:end;
+  grid-template-columns: 1fr;
+  vertical-align: middle;
   }
 
   .collapseButton {
@@ -307,5 +320,10 @@ margin: 40px 160px;
 .ProjectCard {
 
 }
+
+.Contact {
+  grid-auto-rows: 150px;
+}
+
 
 }
