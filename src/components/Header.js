@@ -7,9 +7,6 @@ export default class Header extends Component {
 	render() {
 		return (
 			<div className="Header">
-				<div className="titleText">Trevor Seibel</div>
-				<ul className="navbarLinks">
-					<li>
 						<NavLink
 							activeClassName="activeLink"
 							className="link"
