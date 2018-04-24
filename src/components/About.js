@@ -24,15 +24,14 @@ export default class About extends Component {
 				</p>
 
 				<p>
-					{" "}
 					Trevor mainly works in JavaScript, namely React.js, but has
 					been known to code in C. You can expect him to easily handle
 					most HTML and CSS tasks. He'd probably use Sass, Redux and
 					Gulp to build a big project, but he's not picky. He's also
-					got a good handle on RESTful API's, and back in the day he
-					used Bootstrap quite a bit. If you're thinking 'would Trevor
-					be good at learning <i>this</i> particular tool?' the answer is
-					always Yes.
+					got a good handle on RESTful API's, and before he devoted
+					his efforts to SPA's he used Bootstrap and jQuery quite a
+					bit. If you're thinking 'would Trevor be good at learning{" "}
+					<i>this</i> particular tool?' the answer is always Yes.
 				</p>
 			</div>
 		);

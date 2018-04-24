@@ -1,26 +1,28 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway|Work+Sans');
-
+@import url("https://fonts.googleapis.com/css?family=Raleway|Work+Sans");
 
 // Variables
 $navbar-dimension: 80px;
 
 html {
-  font-family: 'Raleway', serif;
+  font-family: "Raleway", serif;
 }
 
 body {
-  padding:  0;
+  padding: 0;
   margin: 0;
-  min-height:100%;
+  min-height: 100%;
   line-height: 170%;
-
 }
 
 h2 {
   font-weight: lighter;
-  font-size:3em;
+  font-size: 3em;
   margin-top: 20px;
   line-height: 150%;
+}
+
+h3 {
+  font-weight: lighter;
 }
 
 ul {
@@ -28,14 +30,13 @@ ul {
 }
 
 #root {
-  height:100vh;
+  height: 100vh;
 }
 
 // App Component
 // ======================
 .App {
   height: 100%;
-
 }
 
 // Navbar Component
@@ -49,33 +50,30 @@ ul {
 }
 
 .collapseButton {
-  margin:auto;
-  display:none;
+  margin: auto;
+  display: none;
   height: 60px;
   width: 50px;
   padding: 10px;
-  background-color: rgba(0, 0, 0, 0.2); 
-  border-radius: 80px;
-  border-width: 1px;
-  border-color: black;
-  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.7);
+  fill: white;
 }
 
-.navbarLinks{
+.navbarLinks {
 }
 
 .DirectoryLink {
   color: black;
-  max-height:$navbar-dimension;
-  border-right: 3px solid rgba(0, 0, 0, 0.0);
+  max-height: $navbar-dimension;
+  border-right: 2px solid rgba(0, 0, 0, 0);
   font-size: 12px;
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   letter-spacing: 3px;
   text-align: right;
   background-color: white;
   margin: 5px;
   padding: 5px;
-  &:hover{
+  &:hover {
     color: orange;
   }
 }
@@ -89,53 +87,52 @@ ul {
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 }
 
-.link{
+.link {
   text-decoration: none;
   &:visited {
     text-decoration: none;
-    color:blue;
+    color: blue;
   }
-
 }
 
 .activeLink {
-  color:black;
-  .DirectoryLink{
-    border-right: 3px solid black;
+  color: black;
+  .DirectoryLink {
+    border-right: 2px solid black;
   }
-  &:visited{
-    color:black;
+  &:visited {
+    color: black;
   }
 }
-
 
 // Content
 //===============================================
 
 .content {
-  height:100%;
-  margin: 0px 40px 0px 150px ;
+  height: 100%;
+  margin: 0px 40px 0px 150px;
 }
 // Home Component
 // ==============================================
 
-.Home{
-  height:100%;
+.Home {
+  height: 100%;
   display: grid;
-  margin:auto;
-  grid-gap:20px;
+  margin: auto;
+  grid-gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  align-items:center;
+  align-items: center;
 }
 
 .profilePicture {
-    display:block;
-    margin: auto;
-    max-height:300px;
-    max-width:300px;
-    border-radius: 300px;
-    border: 1px solid black;
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  display: block;
+  margin: auto;
+  height: 300px;
+  width: 300px;
+  border-radius: 300px;
+  border: 1px solid black;
+  background-color: lightgrey;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 }
 
 .homeText {
@@ -154,13 +151,11 @@ ul {
 // ===============================
 
 .Skills {
-
 }
 
 .skillsList {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-
 }
 
 // Project Component
@@ -168,10 +163,9 @@ ul {
 
 .ProjectsBody {
   display: grid;
-  grid-gap:40px;
+  grid-gap: 40px;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
-
 
 .ProjectsTitle {
 }
@@ -185,42 +179,41 @@ ul {
 }
 
 .ProjectCardImage {
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-    margin: auto;
-    width: 300px;
-    height: 200px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-color: grey;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  margin: auto;
+  width: 300px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: lightgrey;
 }
-
 
 .ProjectCardTitle {
 }
 
 .ProjectCardSummary {
- color: grey;
+  color: grey;
 }
 
 .ProjectCardBody {
   color: grey;
-  font-size: .8em;
+  font-size: 0.8em;
 }
 
 // Contact Component
 // =================================
 
 .Contact {
-  height:100%;
+  height: 100%;
   display: grid;
-  margin:auto;
-  grid-gap:20px;
+  margin: auto;
+  grid-gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  align-items:center;
+  align-items: center;
 }
 
 .ContactTitle {
-  text-align:center;
+  text-align: center;
   grid-column: span 2;
 }
 
@@ -230,74 +223,70 @@ ul {
 .Icon {
   &:hover {
     fill: orange;
-    }
+  }
 }
-
 
 // Responsive table-layout
 // =================================
 @media (max-width: 700px) {
-  
   .content {
-    grid-column-start:1;
-    grid-row-start:2;
+    grid-column-start: 1;
+    grid-row-start: 2;
     margin: 20px 0px 80px 0px;
     padding: 0px;
   }
 
   .Home {
-    position: relative;
-    transform: translateY(0); 
+    grid-auto-rows: 250px;
   }
 
-  .profilePicture{
-    max-height:200px;
-    max-width:200px;
+  .profilePicture {
+    max-height: 200px;
+    max-width: 200px;
   }
 
   .Navbar {
     position: fixed;
     transform: translateY(0);
-    bottom:10px;
+    bottom: 10px;
     right: 20px;
-    align-content:end;
-    z-index:99;
+    align-content: end;
+    z-index: 99;
     border: 0px;
-      display:grid;
-  align-content:end;
-  grid-template-columns: 1fr;
-  vertical-align: middle;
+    display: grid;
+    align-content: end;
+    grid-template-columns: 1fr;
+    vertical-align: middle;
   }
 
   .collapseButton {
-    display:block;
+    display: block;
   }
 
-  .navbarLinks{
+  .navbarLinks {
   }
 
-  .DirectoryLink{
-    color:white;
+  .DirectoryLink {
+    color: white;
     background-color: rgba(0, 0, 0, 0.8);
     border-right: 0px;
-    .activeLink{
+    .activeLink {
       border-right: 0px;
     }
   }
 
-.activeLink {
-  color:white;
-  .DirectoryLink{
-    border-right: 0px solid black;
+  .activeLink {
+    color: white;
+    .DirectoryLink {
+      border-right: 0px solid black;
+    }
   }
-}
-  
+
   .sidebarCollapsed {
-    display:none;
+    display: none;
   }
 
   .sidebarExpanded {
-    
   }
 
   .App {
@@ -313,17 +302,14 @@ ul {
     grid: 1fr 1fr;
   }
 
-.ProjectsBody {
-  justify-items: center;
-}
+  .ProjectsBody {
+    justify-items: center;
+  }
 
-.ProjectCard {
+  .ProjectCard {
+  }
 
-}
-
-.Contact {
-  grid-auto-rows: 150px;
-}
-
-
+  .Contact {
+    grid-auto-rows: 150px;
+  }
 }

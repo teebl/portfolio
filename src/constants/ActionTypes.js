@@ -1,0 +1,1 @@
+export const NEXT_PROFILE = 'NEXT_PROFILE'

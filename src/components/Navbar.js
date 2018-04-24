@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import DirectoryLink from './DirectoryLink';
-import bars from '../resources/icons/bars.svg'
+import Icon from './Icon';
 
 export default class Navbar extends Component {
 	constructor(props) {
@@ -19,6 +19,7 @@ export default class Navbar extends Component {
 		console.log('sidebarCollapse is ' + this.state.sidebarCollapse)
 	}
 // <DirectoryLink page="SKILLS" directory="/Skills" />
+// onClick of boring button: ignore default, action creator. 
 
 	render() {
 
@@ -32,8 +33,9 @@ export default class Navbar extends Component {
 				
 				<DirectoryLink page="PROJECTS" directory="/Projects" />
 				<DirectoryLink page="CONTACT" directory="/Contact" />
+				<button>boring</button>
 				</div>
-				<div className ="collapseButton" onClick={this.collapseSwitch}><img src={bars} /></div>
+				<div className ="collapseButton" onClick={this.collapseSwitch}><Icon icon="bars" size="60" /></div>
 			</div>
 			)
 	}

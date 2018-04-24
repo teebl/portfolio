@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Icon from './Icon';
-import at from '../resources/icons/at.svg';
 
 export default class Contact extends Component {
 	render() {
