@@ -1,4 +1,3 @@
-export const nextProfile = index => ({
+export const nextProfile = () => ({
 	type: "NEXT_PROFILE",
-	index
 });

@@ -8,35 +8,55 @@ import Contact from "./components/Contact";
 import { BrowserRouter, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 
-
 class App extends Component {
   constructor(props) {
-    super(props)
+    super(props);
+
+    this.buttonPress = this.buttonPress.bind(this);
   }
 
-
+  buttonPress(e) {
+    e.preventDefault;
+    this.props.nextProfilePress();
+  }
 
   render() {
+    const index = this.props.data.currentProfileIndex;
+    const currentProfile = this.props.data.profiles[index];
 
-    console.log("rendered App.js props incoming");
-    console.dir(this.props);
     return (
-
-        <BrowserRouter>
-          <ScrollToTop>
-            <div>here: {this.props.data.currentProfileIndex}</div>
-            <div className="App">
-              <Navbar />
-              <div className="content">
-                <Route exact path="/" render={()=><Home home={this.props.data.profiles.trevor.home}/>} />
-                <Route path="/About" component={About} />
-                <Route path="/Skills" component={Skills} />
-                <Route path="/Projects" component={Projects} />
-                <Route path="/Contact" component={Contact} />
-              </div>
+      <BrowserRouter>
+        <ScrollToTop>
+          <div>here: {index}</div>{" "}
+          <button onClick={this.buttonPress}>boring</button>
+          <div className="App">
+            <Navbar />
+            <div className="content">
+              <Route
+                exact
+                path="/"
+                render={() => <Home home={currentProfile.home} />}
+              />
+              <Route
+                path="/About"
+                render={() => <About about={currentProfile.about} />}
+              />
+              <Route
+                path="/Skills"
+                render={() => <Skills skills={currentProfile.skills} />}
+              />
+              <Route
+                path="/Projects"
+                render={() => <Projects projects={currentProfile.projects} />}
+              />
+              <Route
+                path="/Contact"
+                render={() => <Contact contact={currentProfile.contact} />}
+              />
             </div>
-          </ScrollToTop>
-        </BrowserRouter>
+          </div>
+        </ScrollToTop>
+      </BrowserRouter>
     );
   }
 }

@@ -1,32 +1,25 @@
 import React, { Component } from "react";
 
-export default class ProjectCard extends Component {
-	render() {
+function ProjectCard(props) {
+
+	const card = props.card
 		return (
 			<div className="ProjectCard">
 				<div className="ProjectCardImage">
 				<img src="http://via.placeholder.com/300x200" />
 				</div>
-				<h3 className="ProjectCardTitle">Project Title</h3>
+				<h3 className="ProjectCardTitle">{card.title}</h3>
 				<h4 className="ProjectCardSummary">
-					{" "}
-					A quick summary of the project
+					{card.summary}
 				</h4>
 				<div className="ProjectCardBody">
-				<p>
-					Here is the body, there may be a bit of text in here but
-					then again who knows? I might have a lot to say about a
-					project, and what I learned. These things take a lot of
-					work, after all, and I learn a lot.
-				</p>
-				<p>
-					There could be a second paragraph if I really want to get
-					into the details. I think I would be stretching the user's
-					patience though. Brevity and all that.
-				</p>
+				{card.body.map(p => <p>{p}</p>)}
 				</div>
-				<div className="ProjectCardTag">JavaScript</div>
+				<div className="ProjectCardTag">
+				{card.tags.map(t => <span>{t}{" "}</span>)}
+				</div>
 			</div>
 		);
 	}
-}
+
+export default ProjectCard;

@@ -1,21 +1,15 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 
-export default class DirectoryLink extends Component {
-	constructor(props) {
-		super(props);
-	}
-
-	render() {
-		return (
+function DirectoryLink(props) {
+			return (
 			<NavLink
 				activeClassName="activeLink"
 				className="link"
 				exact="true"
-				to={this.props.directory}
+				to={props.directory}
 			>
-				<div className="DirectoryLink">{this.props.page}</div>
+				<div className="DirectoryLink">{props.page}</div>
 			</NavLink>
 		);
-	}
 }
