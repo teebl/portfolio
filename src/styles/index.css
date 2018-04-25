@@ -39,8 +39,9 @@ ul {
   margin: auto;
   display: none;
   height: 60px;
-  width: 50px;
+  width: 60px;
   padding: 10px;
+  padding-left: 20px;
   background-color: rgba(0, 0, 0, 0.7);
   fill: white; }
 
@@ -151,7 +152,8 @@ ul {
   padding: 2px; }
 
 .About {
-  max-width: 800px; }
+  max-width: 800px;
+  padding-bottom: 100px; }
 
 .skillsList {
   display: grid;
@@ -272,6 +274,9 @@ ul {
   .Home {
     padding: 0;
     grid: 1fr 1fr; }
+
+  .Projects {
+    padding-bottom: 100px; }
 
   .ProjectsBody {
     justify-items: center; }
