@@ -7,6 +7,7 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import { BrowserRouter, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
+import NextProfileButton from "./components/NextProfileButton"
 
 class App extends Component {
   constructor(props) {
@@ -20,14 +21,26 @@ class App extends Component {
     this.props.nextProfilePress();
   }
 
+
   render() {
     const index = this.props.data.currentProfileIndex;
     const currentProfile = this.props.data.profiles[index];
     const profileClassName = currentProfile.profileClassName;
+
+    
+    //nothing to see here
+    if (index) {
+      document.body.style = 'background: red;';
+    } else {
+      document.body.style = 'background: white;';
+    }
+
+
     return (
       <BrowserRouter>
         <ScrollToTop>
           <div className= {profileClassName + " App"}>
+            <NextProfileButton buttonPress={this.buttonPress} profileClassName={profileClassName} />
             <Navbar profile={currentProfile} buttonPress={this.buttonPress} profileClassName={profileClassName} />
             <div className="content">
               <Route
@@ -45,7 +58,7 @@ class App extends Component {
               />
               <Route
                 path="/Projects"
-                render={() => <Projects projects={currentProfile.projects} />}
+                render={() => <Projects projects={currentProfile.projects} profileClassName={profileClassName} />}
               />
               <Route
                 path="/Contact"

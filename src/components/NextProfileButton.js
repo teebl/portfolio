@@ -17,7 +17,8 @@ export default class NextProfileButton extends Component {
 				const profileClassName = this.props.profileClassName;
 				console.log(profileClassName);
 			return (
-				<div className={profileClassName + " nextProfileButton"} onClick={this.buttonPressHandler} >HULKAMANIA</div>
+
+				<div className={profileClassName + " nextProfileButton"} onClick={this.buttonPressHandler} ><div className={profileClassName + " square"} />HULKAMANIA</div>
 			);
 		}
 }

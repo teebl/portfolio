@@ -62,13 +62,14 @@ const state = {
 						"Nesting grounds for the forseeable future",
 					body: [
 					"I made this portfolio with the intent of it sticking around for a while, with a capacity for growth and a respectable, self-designed look.",
-					"Built with React, react router, and redux, some people may be surprised to hear this is all technically one app. What's more? A responsive design, and a little extra bit of fun that I'm sure you've noticed.",
+					"Built with React, react router, CSS grid, and redux, some people may be surprised to hear this is all technically one page. What's more? A responsive design, and an easter egg for the astute.",
 					"One thing about the different profiles, it's all made in redux, and it would be relatively arbitrary to add more profiles."
 					],
 					tags: [
 						"JavaScript",
 						"HTML",
 						"CSS",
+						"CSS Grid",
 						"React",
 						"React Router",
 						"Redux"
@@ -128,7 +129,7 @@ const state = {
 		},
 		{
 			home: {
-				image: "/images/hogan.jpg",
+				image: "/images/hogan/hogan.jpg",
 				name: "Hulk Hogan",
 				description: "Wrestler. Entrepeneur. Restaurateur. Acteur."
 			},
@@ -145,38 +146,58 @@ const state = {
 			},
 			projects: [
 				{
-					thumbnail: "",
-					title: "Project Title",
-					summary: "A quick summary",
+					thumbnail: "images/hogan/sheik.jpg",
+					link : "https://www.youtube.com/watch?v=tb5N8WPxddI",
+					title: "1984 WWF Championship",
+					summary: "Gettin' the belt from the Iron Sheik",
 					body: [
-						"Here is the body, there may be a bit of text in here but then again who knows? I might have a lot to say about a project, and what I learned. These things take a lot of work, after all, and I learn a lot.",
-						"There could be a second paragraph if I really want to get into the details. I think I would be stretching the user's patience though. Brevity and all that."
+						"Aw yeah, this one started it all. How many years ago was that? Eight?"
 					],
-					tags: ["JavaScript", "HTML", "CSS"]
-				}
+					tags: ["Sheik", "Leg Drop", "Spandex"]
+				},
+				{
+					thumbnail: "images/hogan/pastamania.jpg",
+					link: "https://www.youtube.com/watch?v=-MqesGatCgg",
+					title: "Pastamania",
+					summary: "Get it while it's open!",
+					body: [
+						"What goes together better than wrestling and pasta? One of the taglines that got scrubbed was 'the carbs here will hit you as hard as I would'."
+					],
+					tags: ["Pasta", "Wise Business Decisions"]
+				},
+				{
+					thumbnail: "images/hogan/band.jpg",
+					link: "https://www.youtube.com/watch?v=LEdAkWOXcVM",
+					title: "The Wrestling Boot Band",
+					summary: "The heart and soul of '92",
+					body: [
+						"This one brings me back. Some real classics on this album, including 'Hulkster's in The House', 'Hulkster's Back', and nobody could forget 'Hulkster in Heaven'. It's been described as an 'invasion of the eardrums', which I'll choose to take as a compliment"
+					],
+					tags: ["#12 on Top Kid Audio (1995)", "Rock", "Pop", "Hip Hop (no, really)"]
+				},
 			],
 			contact: [
 				{
-					type: "facebook",
+					type: "Come be my friend, brother",
 					svg:
 						"M448 80v352c0 26.5-21.5 48-48 48h-85.3V302.8h60.6l8.7-67.6h-69.3V192c0-19.6 5.4-32.9 33.5-32.9H384V98.7c-6.2-.8-27.4-2.7-52.2-2.7-51.6 0-87 31.5-87 89.4v49.9H184v67.6h60.9V480H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48z",
 					link: "https://www.facebook.com/hulkhogan"
 				},
 				{
-					type: "instagram",
+					type: "I take some good pics, brother",
 					svg:
 						"M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z",
 					link: "https://www.instagram.com/hulkhogan/"
 				},
 				{
-					type: "Youtube",
+					type: "I got hours of entertainment, brother",
 					svg:
 						"M186.8 202.1l95.2 54.1-95.2 54.1V202.1zM448 80v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48zm-42 176.3s0-59.6-7.6-88.2c-4.2-15.8-16.5-28.2-32.2-32.4C337.9 128 224 128 224 128s-113.9 0-142.2 7.7c-15.7 4.2-28 16.6-32.2 32.4-7.6 28.5-7.6 88.2-7.6 88.2s0 59.6 7.6 88.2c4.2 15.8 16.5 27.7 32.2 31.9C110.1 384 224 384 224 384s113.9 0 142.2-7.7c15.7-4.2 28-16.1 32.2-31.9 7.6-28.5 7.6-88.1 7.6-88.1z",
 					link:
 						"https://www.youtube.com/channel/UC1crQPB6nC-vrs8VHrIrbTA"
 				},
 				{
-					type: "Twitter",
+					type: "I got some deep thoughts, brother",
 					svg:
 						"M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z",
 

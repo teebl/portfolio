@@ -33,7 +33,6 @@ export default class Navbar extends Component {
 				
 				<DirectoryLink page="PROJECTS" directory="/Projects" />
 				<DirectoryLink page="CONTACT" directory="/Contact" />
-				<NextProfileButton buttonPress={this.props.buttonPress} profileClassName={this.props.profileClassName} />
 				</div>
 				<div className ="collapseButton" onClick={this.collapseSwitch}><Icon icon={bars} size="60" /></div>
 			</div>

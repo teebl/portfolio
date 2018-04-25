@@ -11,7 +11,7 @@ export default class Projects extends Component {
 			<div className="Projects">
 			<h2 className="ProjectsTitle">Projects</h2>
 			<div className="ProjectsBody">
-			{this.props.projects.map( p => <ProjectCard  card={p} />)}
+			{this.props.projects.map( p => <ProjectCard  card={p} profileClassName={this.props.profileClassName}/>)}
 			</div>
 			</div>
 )
