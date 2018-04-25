@@ -13,3 +13,5 @@ function DirectoryLink(props) {
 			</NavLink>
 		);
 }
+
+export default DirectoryLink;

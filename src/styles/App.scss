@@ -15,9 +15,10 @@ body {
 }
 
 h2 {
+  margin: 0;
+  padding: 10px;
   font-weight: lighter;
   font-size: 3em;
-  margin-top: 20px;
   line-height: 150%;
 }
 
@@ -37,6 +38,10 @@ ul {
 // ======================
 .App {
   height: 100%;
+
+&.hogan {
+  color: red;
+}
 }
 
 // Navbar Component
@@ -70,7 +75,6 @@ ul {
   font-family: "Work Sans", sans-serif;
   letter-spacing: 3px;
   text-align: right;
-  background-color: white;
   margin: 5px;
   padding: 5px;
   &:hover {
@@ -101,6 +105,43 @@ ul {
     border-right: 2px solid black;
   }
   &:visited {
+    color: black;
+  }
+}
+
+// NextProfileButton
+// ==============================================
+
+.nextProfileButton {
+  color: black;
+  max-height: $navbar-dimension;
+  border-right: 2px solid rgba(0, 0, 0, 0);
+  font-size: 10px;
+  font-family: "Work Sans", sans-serif;
+  letter-spacing: 3px;
+  text-align: right;
+  background-color: white;
+  margin: 5px;
+  padding: 5px;
+  cursor: pointer;
+  &:hover {
+    color: orange;
+  }
+  &.hogan {
+  background-color: red;
+  color: yellow;
+  &:hover {
+    color: black;
+  }
+}
+}
+
+.nextProfileButtonHogan {
+  background-color: red;
+  font-size: 10px;
+  color: yellow;
+  cursor:pointer;
+  &:hover {
     color: black;
   }
 }
@@ -136,7 +177,6 @@ ul {
 }
 
 .homeText {
-  // grid-column: span 2;
   padding: 2px;
 }
 
@@ -182,10 +222,11 @@ ul {
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   margin: auto;
   width: 300px;
-  height: 200px;
+  height: 169px;
   background-repeat: no-repeat;
   background-size: contain;
   background-color: lightgrey;
+
 }
 
 .ProjectCardTitle {
@@ -198,6 +239,18 @@ ul {
 .ProjectCardBody {
   color: grey;
   font-size: 0.8em;
+}
+
+.ProjectCardTag {
+  padding: 3px;
+  margin: 3px;
+  display: inline-block;
+  font-size: 12px;
+  color: grey;
+  border: 1px solid lightgrey;
+  line-height: 100%;
+
+
 }
 
 // Contact Component

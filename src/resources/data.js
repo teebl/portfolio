@@ -1,7 +1,7 @@
 const state = {
 	currentProfileIndex: 0,
 	profiles: [
-	{
+		{
 			home: {
 				image: "/images/profile.jpg",
 				name: "Trevor Seibel",
@@ -15,16 +15,86 @@ const state = {
 					"Trevor mainly works in JavaScript, namely React.js, but has been known to code in C. You can expect him to easily handle most HTML and CSS tasks. He'd probably use Sass, Redux and Gulp to build a big project, but he's not picky. He's also got a good handle on RESTful API's, and before he devoted his efforts to SPA's he used Bootstrap and jQuery quite a bit. If you're thinking 'would Trevor be good at learning <i>this</i> particular tool?' the answer is always Yes."
 				]
 			},
-			projects: [{
-					thumbnail: "",
-					title: "Project Title",
-					summary: "A quick summary",
+			projects: [
+				{
+					thumbnail: "/images/movieapp.jpg",
+					link: "https://teebl.github.io/movie-app",
+					title: "Movie App",
+					summary: "Single-page Netflix clone, made with MovieDB API",
 					body: [
-						"Here is the body, there may be a bit of text in here but then again who knows? I might have a lot to say about a project, and what I learned. These things take a lot of work, after all, and I learn a lot.",
-						"There could be a second paragraph if I really want to get into the details. I think I would be stretching the user's patience though. Brevity and all that."
+						"This Netflix Clone utilizes the MovieDB API to create a slick movie database. A single page application with dynamic URL parameters, responsive carousels, and search function."
 					],
-					tags: [ "JavaScript", "HTML", "CSS"]
-				}],
+					tags: [
+						"JavaScript",
+						"HTML",
+						"CSS",
+						"React",
+						"ReactRouter",
+						"API"
+					]
+				},
+				{
+					thumbnail: "/images/todolist.png",
+					link: "https://teebl.github.io/todo-list",
+					title: "Todo List",
+					summary: "First React app, lightweight and dynamic",
+					body: [
+						"Task info stored in state. CSS stylings dependent on task's priority, completion. Demonstrates concepts like immutability, stateful/stateless components, and event handling."
+					],
+					tags: ["JavaScript", "HTML", "CSS", "React", "API"]
+				},
+				{
+					thumbnail: "/images/blog.png",
+					link: "https://teebl.github.io/blog/",
+					title: "Blog",
+					summary:
+						"Boilerplate setup. Around since the start.",
+					body: [
+						"Ongoing blog documenting my progress as a coder. Made with Jekyll Now, a blog boilerplate for github pages. This webpage doesn't reflect my abilities as a coder, but but I think it looks nicer than a wordpress blog."
+					],
+					tags: ["Jekyll Now"]
+				},
+						{
+					thumbnail: "/images/portfolio.png",
+					link: "",
+					title: "This site",
+					summary:
+						"Nesting grounds for the forseeable future",
+					body: [
+					"I made this portfolio with the intent of it sticking around for a while, with a capacity for growth and a respectable, self-designed look.",
+					"Built with React, react router, and redux, some people may be surprised to hear this is all technically one app. What's more? A responsive design, and a little extra bit of fun that I'm sure you've noticed.",
+					"One thing about the different profiles, it's all made in redux, and it would be relatively arbitrary to add more profiles."
+					],
+					tags: [
+						"JavaScript",
+						"HTML",
+						"CSS",
+						"React",
+						"React Router",
+						"Redux"
+					]
+				},
+				{
+					thumbnail: "/images/weather.png",
+					link: "https://codepen.io/teebl/full/JMpRrN",
+					title: "Weather App",
+					summary:
+						"Get your local weather, in your favourite temperature unit",
+					body: [
+						"Made as part of the freeCodeCamp Front End Development Certification Program. Requests local GPS coordinates, and using that, contacts an API for local weather data. Demonstrates my abilities with javascript, particularily jQuery. Also demonstrates understanding of JSON and API's."
+					],
+					tags: [
+						"JavaScript",
+						"HTML",
+						"CSS",
+						"jQuery",
+						"Bootstrap",
+						"API"
+					]
+				},
+
+				
+			],
 			contact: [
 				{
 					type: "email",
@@ -54,9 +124,9 @@ const state = {
 					link: "https://twitter.com/MrSeaBull"
 				}
 			],
-			buttonText: "boring"
+			profileClassName: "standard"
 		},
-	{
+		{
 			home: {
 				image: "/images/hogan.jpg",
 				name: "Hulk Hogan",
@@ -65,15 +135,16 @@ const state = {
 
 			about: {
 				text: [
-				"Hogan here,  Listen. If you need an About page to know who I am, then you may very well be beyond help. Or a millenial. And that's a shame, because that means  you've missed out on the glory days of what may possibly be the greatest professional wrestler of all time, brother. You also don't get fun playground equipment anymore, like those merry-go-rounds.",
-				"Anyways, I ought to get you up to speed. back in the 80's I made a name for myself jumping off of dudes from on top of ladders in the ol' WWE, but it was called the WWF back then. Not that we were wrestling pandas or anything those days, at least not publicly. Although sometimes I wish we could have, those bastards could take a metal chair to the back better than anyone. Or, so I've heard. I'm losing the plot here. Thanks to my glistening showmanship and impeccable fashion taste, not to mention a whole lotta elbows to the noggin', I ended up the WWF Champion. This would happen another five times or so, which is good for me, because I cannot remember a THING about winning that first one.",
-				"Around here's when I noticed people were noticing, and I figured 'hey, why don't I make a buck off this' so I did what anybody would do, and started my own restaurant in a shopping mall. I called it Pastamaniacs, and it was glorious. And it performed admirably as a food court restaurant, getting nearly a whole year of operation under its belt.",
-				"Anywho after that was some movies, action figures, night show appearances, the whole bit. Then the 2000's happened, and I gotta say, that decade hit me about as hard as it hit America as a whole. Which is to say, not good. But here we are now, and I got my new website all runnin' which is good, because my phone certainly isn't ringing as much as it used to.",				"",
-				"So send along one of those twitters or somethin', and let's get to making a branded vaccuum, or whatever. I'll take all comers, I'm not picky. Hulk out.",
-
+					"Hogan here,  Listen. If you need an About page to know who I am, then you may very well be beyond help. Or a millenial. And that's a shame, because that means  you've missed out on the glory days of what may possibly be the greatest professional wrestler of all time, brother. You also don't get fun playground equipment anymore, like those merry-go-rounds.",
+					"Anyways, I ought to get you up to speed. back in the 80's I made a name for myself jumping off of dudes from on top of ladders in the ol' WWE, but it was called the WWF back then. Not that we were wrestling pandas or anything those days, at least not publicly. Although sometimes I wish we could have, those bastards could take a metal chair to the back better than anyone. Or, so I've heard. I'm losing the plot here. Thanks to my glistening showmanship and impeccable fashion taste, not to mention a whole lotta elbows to the noggin', I ended up the WWF Champion. This would happen another five times or so, which is good for me, because I cannot remember a THING about winning that first one.",
+					"Around here's when I noticed people were noticing, and I figured 'hey, why don't I make a buck off this' so I did what anybody would do, and started my own restaurant in a shopping mall. I called it Pastamaniacs, and it was glorious. And it performed admirably as a food court restaurant, getting nearly a whole year of operation under its belt.",
+					"Anywho after that was some movies, action figures, night show appearances, the whole bit. Then the 2000's happened, and I gotta say, that decade hit me about as hard as it hit America as a whole. Which is to say, not good. But here we are now, and I got my new website all runnin' which is good, because my phone certainly isn't ringing as much as it used to.",
+					"",
+					"So send along one of those twitters or somethin', and let's get to making a branded vaccuum, or whatever. I'll take all comers, I'm not picky. Hulk out."
 				]
 			},
-			projects: [{
+			projects: [
+				{
 					thumbnail: "",
 					title: "Project Title",
 					summary: "A quick summary",
@@ -81,22 +152,28 @@ const state = {
 						"Here is the body, there may be a bit of text in here but then again who knows? I might have a lot to say about a project, and what I learned. These things take a lot of work, after all, and I learn a lot.",
 						"There could be a second paragraph if I really want to get into the details. I think I would be stretching the user's patience though. Brevity and all that."
 					],
-					tags: [ "JavaScript", "HTML", "CSS"]
-				}],
+					tags: ["JavaScript", "HTML", "CSS"]
+				}
+			],
 			contact: [
 				{
 					type: "facebook",
-					svg:"M448 80v352c0 26.5-21.5 48-48 48h-85.3V302.8h60.6l8.7-67.6h-69.3V192c0-19.6 5.4-32.9 33.5-32.9H384V98.7c-6.2-.8-27.4-2.7-52.2-2.7-51.6 0-87 31.5-87 89.4v49.9H184v67.6h60.9V480H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48z",					link: "https://www.facebook.com/hulkhogan"
+					svg:
+						"M448 80v352c0 26.5-21.5 48-48 48h-85.3V302.8h60.6l8.7-67.6h-69.3V192c0-19.6 5.4-32.9 33.5-32.9H384V98.7c-6.2-.8-27.4-2.7-52.2-2.7-51.6 0-87 31.5-87 89.4v49.9H184v67.6h60.9V480H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48z",
+					link: "https://www.facebook.com/hulkhogan"
 				},
 				{
 					type: "instagram",
-					svg: "M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z",
+					svg:
+						"M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z",
 					link: "https://www.instagram.com/hulkhogan/"
 				},
 				{
 					type: "Youtube",
-					svg: "M186.8 202.1l95.2 54.1-95.2 54.1V202.1zM448 80v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48zm-42 176.3s0-59.6-7.6-88.2c-4.2-15.8-16.5-28.2-32.2-32.4C337.9 128 224 128 224 128s-113.9 0-142.2 7.7c-15.7 4.2-28 16.6-32.2 32.4-7.6 28.5-7.6 88.2-7.6 88.2s0 59.6 7.6 88.2c4.2 15.8 16.5 27.7 32.2 31.9C110.1 384 224 384 224 384s113.9 0 142.2-7.7c15.7-4.2 28-16.1 32.2-31.9 7.6-28.5 7.6-88.1 7.6-88.1z",
-					link: "https://www.youtube.com/channel/UC1crQPB6nC-vrs8VHrIrbTA"
+					svg:
+						"M186.8 202.1l95.2 54.1-95.2 54.1V202.1zM448 80v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48zm-42 176.3s0-59.6-7.6-88.2c-4.2-15.8-16.5-28.2-32.2-32.4C337.9 128 224 128 224 128s-113.9 0-142.2 7.7c-15.7 4.2-28 16.6-32.2 32.4-7.6 28.5-7.6 88.2-7.6 88.2s0 59.6 7.6 88.2c4.2 15.8 16.5 27.7 32.2 31.9C110.1 384 224 384 224 384s113.9 0 142.2-7.7c15.7-4.2 28-16.1 32.2-31.9 7.6-28.5 7.6-88.1 7.6-88.1z",
+					link:
+						"https://www.youtube.com/channel/UC1crQPB6nC-vrs8VHrIrbTA"
 				},
 				{
 					type: "Twitter",
@@ -106,10 +183,9 @@ const state = {
 					link: "https://twitter.com/HulkHogan"
 				}
 			],
-			buttonText: "boring"
+			profileClassName: "hogan"
 		}
 	]
-
 };
 
 export default state;

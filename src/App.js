@@ -15,22 +15,20 @@ class App extends Component {
     this.buttonPress = this.buttonPress.bind(this);
   }
 
-  buttonPress(e) {
-    e.preventDefault;
+  buttonPress() {
+
     this.props.nextProfilePress();
   }
 
   render() {
     const index = this.props.data.currentProfileIndex;
     const currentProfile = this.props.data.profiles[index];
-
+    const profileClassName = currentProfile.profileClassName;
     return (
       <BrowserRouter>
         <ScrollToTop>
-          <div>here: {index}</div>{" "}
-          <button onClick={this.buttonPress}>boring</button>
-          <div className="App">
-            <Navbar />
+          <div className= {profileClassName + " App"}>
+            <Navbar profile={currentProfile} buttonPress={this.buttonPress} profileClassName={profileClassName} />
             <div className="content">
               <Route
                 exact

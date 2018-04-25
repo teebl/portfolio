@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import DirectoryLink from './DirectoryLink';
 import Icon from './Icon';
 import bars from '../resources/bars';
+import NextProfileButton from './NextProfileButton';
 
 export default class Navbar extends Component {
 	constructor(props) {
@@ -19,7 +20,6 @@ export default class Navbar extends Component {
 		this.setState({sidebarCollapse: !this.state.sidebarCollapse});
 	}
 	
-// onClick of boring button: ignore default, action creator. 
 
 	render() {
 
@@ -33,6 +33,7 @@ export default class Navbar extends Component {
 				
 				<DirectoryLink page="PROJECTS" directory="/Projects" />
 				<DirectoryLink page="CONTACT" directory="/Contact" />
+				<NextProfileButton buttonPress={this.props.buttonPress} profileClassName={this.props.profileClassName} />
 				</div>
 				<div className ="collapseButton" onClick={this.collapseSwitch}><Icon icon={bars} size="60" /></div>
 			</div>
