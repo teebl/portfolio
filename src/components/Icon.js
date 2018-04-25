@@ -1,16 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 
 function Icon(props) {
 	const icon = props.icon;
 
-
 	if (icon.link !== "") {
 		return (
-			<a
-				className="Icon"
-				href={icon.link}
-				title={icon.type}
-			>
+			<a className="Icon" href={icon.link} title={icon.type}>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					width={props.size}
@@ -32,7 +27,7 @@ function Icon(props) {
 				<path d={icon.svg} />
 			</svg>
 		);
-	 }
+	}
 }
 
 Icon.defaultProps = {

@@ -2,12 +2,11 @@ import React, { Component } from "react";
 import Navbar from "./components/Navbar.js";
 import Home from "./components/Home";
 import About from "./components/About";
-import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import { BrowserRouter, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
-import NextProfileButton from "./components/NextProfileButton"
+import NextProfileButton from "./components/NextProfileButton";
 
 class App extends Component {
   constructor(props) {
@@ -17,31 +16,34 @@ class App extends Component {
   }
 
   buttonPress() {
-
     this.props.nextProfilePress();
   }
-
 
   render() {
     const index = this.props.data.currentProfileIndex;
     const currentProfile = this.props.data.profiles[index];
     const profileClassName = currentProfile.profileClassName;
 
-    
     //nothing to see here
     if (index) {
-      document.body.style = 'background: red;';
+      document.body.style = "background: red;";
     } else {
-      document.body.style = 'background: white;';
+      document.body.style = "background: white;";
     }
-
 
     return (
       <BrowserRouter>
         <ScrollToTop>
-          <div className= {profileClassName + " App"}>
-            <NextProfileButton buttonPress={this.buttonPress} profileClassName={profileClassName} />
-            <Navbar profile={currentProfile} buttonPress={this.buttonPress} profileClassName={profileClassName} />
+          <div className={profileClassName + " App"}>
+            <NextProfileButton
+              buttonPress={this.buttonPress}
+              profileClassName={profileClassName}
+            />
+            <Navbar
+              profile={currentProfile}
+              buttonPress={this.buttonPress}
+              profileClassName={profileClassName}
+            />
             <div className="content">
               <Route
                 exact
@@ -53,12 +55,13 @@ class App extends Component {
                 render={() => <About about={currentProfile.about} />}
               />
               <Route
-                path="/Skills"
-                render={() => <Skills skills={currentProfile.skills} />}
-              />
-              <Route
                 path="/Projects"
-                render={() => <Projects projects={currentProfile.projects} profileClassName={profileClassName} />}
+                render={() => (
+                  <Projects
+                    projects={currentProfile.projects}
+                    profileClassName={profileClassName}
+                  />
+                )}
               />
               <Route
                 path="/Contact"

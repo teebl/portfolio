@@ -180,6 +180,8 @@ ul {
 .content {
   height: 100%;
   margin: 0px 40px 0px 150px;
+
+
 }
 // Home Component
 // ==============================================
@@ -212,20 +214,29 @@ ul {
 // ===============================
 
 .About {
-  max-width: 800px;
-  padding-bottom: 100px;
-}
-
-// Skills Component
-// ===============================
-
-.Skills {
-}
-
-.skillsList {
+  height: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  margin: auto;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  align-items: center;
+  align-content:center;
+  justify-items:center;
+  // 
+
 }
+
+.AboutTitle {
+  grid-column:span 2;
+  text-align: center;
+  max-width: 150px;
+
+}
+.AboutText{
+  grid-column: span 3;
+  max-width: 800px;
+}
+
 
 // Project Component
 // =================================
@@ -332,6 +343,12 @@ ul {
 
   .Home {
     grid-auto-rows: 250px;
+  }
+  
+  .About {
+    justify-items:center;
+    grid-template-columns: 1fr;
+    padding-bottom: 100px;
   }
 
   .profilePicture {

@@ -76,6 +76,23 @@ const state = {
 					]
 				},
 				{
+					thumbnail: "/images/oldportfolio.jpeg",
+					link: "https://teebl.github.io/old-portfolio",
+					title: "The Old Portfolio",
+					summary: "Last year's model",
+					body: [
+						"This was the first site I built to showcase my skills. One page of bootstrap with a bit of jQuery.",
+						"Learned a lot about responsive Design and page composition here, as well as implementing navbars."
+					],
+					tags: [
+						"JavaScript",
+						"HTML",
+						"CSS",
+						"Bootstrap",
+						"jQuery",
+					]
+				},
+				{
 					thumbnail: "/images/weather.png",
 					link: "https://codepen.io/teebl/full/JMpRrN",
 					title: "Weather App",

@@ -1,4 +1,12 @@
 
-## Under Construction
+# Portfolio
 
-Currently building a new portfolio site! While that's underway, please take a look at the [old site](https://teebl.github.io/old-portfolio) 
+A mobile-ready portfolio with room for growth. Designed for easy additions and tweaks.
+
+## Tools Used
+
+React
+create-react-app
+react-router
+Redux
+Font Awesome Icons
