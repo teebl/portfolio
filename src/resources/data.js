@@ -48,7 +48,7 @@ const state = {
 					link: "https://teebl.github.io/blog/",
 					title: "Blog",
 					summary:
-						"Boilerplate setup. Around since the start.",
+						"Boilerplate setup. Around since the start",
 					body: [
 						"Ongoing blog documenting my progress as a coder. Made with Jekyll Now, a blog boilerplate for github pages. This webpage doesn't reflect my abilities as a coder, but but I think it looks nicer than a wordpress blog."
 					],

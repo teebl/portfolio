@@ -1,5 +1,5 @@
 {
-  "homepage": "https://github.com/teebl/",
+  "homepage": "https://teebl.github.io",
   "name": "teebl.github.io",
   "version": "0.1.0",
   "private": true,
@@ -15,7 +15,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "deploy": "react-scripts build && gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build",    
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
