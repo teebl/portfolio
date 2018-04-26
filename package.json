@@ -1,6 +1,6 @@
-
+{
   "homepage": "https://teebl.github.io/portfolio",
-  "name": "teebl.github.io",
+  "name": "portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -16,7 +16,7 @@
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build",    
+    "deploy": "gh-pages -d build",    
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
