@@ -32,7 +32,7 @@ class App extends Component {
     }
 
     return (
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <ScrollToTop>
           <div className={profileClassName + " App"}>
             <NextProfileButton
@@ -47,15 +47,15 @@ class App extends Component {
             <div className="content">
               <Route
                 exact
-                path="/"
+                path='/portfolio'
                 render={() => <Home home={currentProfile.home} />}
               />
               <Route
-                path="/About"
+                path='/portfolio/About'
                 render={() => <About about={currentProfile.about} />}
               />
               <Route
-                path="/Projects"
+                path='/portfolio/Projects'
                 render={() => (
                   <Projects
                     projects={currentProfile.projects}
@@ -64,7 +64,7 @@ class App extends Component {
                 )}
               />
               <Route
-                path="/Contact"
+                path='/portfolio/Contact'
                 render={() => <Contact contact={currentProfile.contact} />}
               />
             </div>

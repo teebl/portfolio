@@ -10,7 +10,7 @@ body {
 
 h2 {
   margin: 0;
-  padding: 10px;
+  padding: 10px 10px 10px 0px;
   font-weight: lighter;
   font-size: 3em;
   line-height: 150%; }
@@ -86,13 +86,13 @@ ul {
   color: black;
   max-height: 80px;
   vertical-align: middle;
-  border-right: 2px solid rgba(0, 0, 0, 0);
+  border: 1px solid lightgrey;
   font-size: 10px;
   font-family: "Work Sans", sans-serif;
   letter-spacing: 3px;
   color: rgba(0, 0, 0, 0);
   text-align: right;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0);
   margin: 5px;
   padding: 5px;
   cursor: pointer; }
@@ -105,17 +105,8 @@ ul {
     .nextProfileButton.hogan:hover {
       color: black; }
 
-.nextProfileButtonHogan {
-  display: inline-block;
-  background-color: red;
-  font-size: 10px;
-  color: yellow;
-  cursor: pointer; }
-  .nextProfileButtonHogan:hover {
-    color: black; }
-
 .square {
-  display: inline-block;
+  display: none;
   margin: 0;
   margin-right: 5px;
   height: 9px;
@@ -167,7 +158,7 @@ ul {
   max-width: 150px; }
 
 .AboutText {
-  grid-column: span 3;
+  grid-column: span 4;
   max-width: 800px; }
 
 .ProjectsBody {
@@ -220,7 +211,7 @@ ul {
   display: grid;
   margin: auto;
   grid-gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
   align-items: center; }
 
 .ContactTitle {
@@ -230,6 +221,25 @@ ul {
 .Icon:hover {
   fill: orange; }
 
+@media (max-width: 1024px) {
+  .About {
+    grid-template-columns: 1fr; }
+
+  .Home {
+    text-align: center;
+    grid-template-columns: 1fr; }
+
+  .ProjectsTitle {
+    text-align: center; }
+
+  .ProjectsBody {
+    justify-items: center; }
+
+  .nextProfileButton {
+    border: 1px solid rgba(0, 0, 0, 0); }
+
+  .square {
+    display: inline-block; } }
 @media (max-width: 700px) {
   .content {
     grid-column-start: 1;
@@ -298,6 +308,7 @@ ul {
     justify-items: center; }
 
   .Contact {
+    grid-template-columns: 1fr 1fr;
     grid-auto-rows: 150px; } }
 
 /*# sourceMappingURL=App.css.map */

@@ -26,11 +26,11 @@ export default class Navbar extends Component {
 		return (
 			<div className="Navbar">
 				<div className={"navbarLinks " + collapseClassName}>
-					<DirectoryLink page="HOME" directory="/" />
-					<DirectoryLink page="ABOUT" directory="/About" />
+					<DirectoryLink page="HOME" directory="/portfolio" />
+					<DirectoryLink page="ABOUT" directory="/portfolio/About" />
 
-					<DirectoryLink page="PROJECTS" directory="/Projects" />
-					<DirectoryLink page="CONTACT" directory="/Contact" />
+					<DirectoryLink page="PROJECTS" directory="/portfolio/Projects" />
+					<DirectoryLink page="CONTACT" directory="/portfolio/Contact" />
 				</div>
 				<div className="collapseButton" onClick={this.collapseSwitch}>
 					<Icon icon={bars} size="60" />

@@ -7,7 +7,7 @@ function ProjectCard(props) {
 	return (
 		<div className={profileClassName + " ProjectCard"}>
 			<div className="ProjectCardImage">
-				<a href={card.link}>
+				<a href={card.link} target="_blank">
 					<img src={thumbnail} alt={card.title + " thumbnail"}/>
 				</a>
 			</div>
