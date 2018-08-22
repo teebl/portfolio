@@ -1,21 +1,17 @@
-import { createStore } from 'redux';
+import { createStore } from "redux";
 
 //import root reducer
-import rootReducer from './reducers/index';
-
+import rootReducer from "./reducers/index";
 
 //import state
-import data from './resources/data';
-
+var data = require("./resources/data.json");
 
 //clone data to default state
 
-const defaultState = {...data};
+const defaultState = { ...data };
 
-console.log('defaultState incoming (store.js)');
+console.log("defaultState incoming (store.js)");
 console.dir(defaultState);
-
-
 
 const store = createStore(rootReducer);
 
