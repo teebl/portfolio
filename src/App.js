@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import styled from "styled-components";
+
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -7,6 +9,30 @@ import Contact from "./pages/Contact";
 import { BrowserRouter, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import NextProfileButton from "./components/NextProfileButton";
+
+const StyledApp = styled.div`
+  height: 100%;
+
+  @media (max-width: 700px) {
+    padding: 0px 10px;
+    grid-gap: 10px;
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+`;
+
+const Content = styled.div`
+  height: 100%;
+  margin: 0px 40px 0px 150px;
+
+  @media (max-width: 700px) {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    margin: 20px 0px 80px 0px;
+    padding: 0px;
+  }
+`;
 
 class App extends Component {
   constructor(props) {
@@ -34,7 +60,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <ScrollToTop>
-          <div className={profileClassName + " App"}>
+          <StyledApp>
             <NextProfileButton
               buttonPress={this.buttonPress}
               profileClassName={profileClassName}
@@ -44,7 +70,7 @@ class App extends Component {
               buttonPress={this.buttonPress}
               profileClassName={profileClassName}
             />
-            <div className="content">
+            <Content>
               <Route
                 exact
                 path="/portfolio"
@@ -67,8 +93,8 @@ class App extends Component {
                 path="/portfolio/Contact"
                 render={() => <Contact contact={currentProfile.contact} />}
               />
-            </div>
-          </div>
+            </Content>
+          </StyledApp>
         </ScrollToTop>
       </BrowserRouter>
     );

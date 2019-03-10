@@ -9,28 +9,31 @@ import store from "./store";
 import { nextProfile } from "./actions/index.js";
 
 const mapStateToProps = state => {
-	return {
-		data: state.profiles
-	};
+  return {
+    data: state.profiles
+  };
 };
 
 const mapDispatchToProps = dispatch => {
-	return {
-		nextProfilePress: () => {
-			dispatch(nextProfile());
-		}
-	};
+  return {
+    nextProfilePress: () => {
+      dispatch(nextProfile());
+    }
+  };
 };
 
-const ConnectedApp = connect(mapStateToProps, mapDispatchToProps)(App);
+const ConnectedApp = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App);
 
 console.log("store.getState() in index.js incoming");
 console.dir(store.getState());
 
 ReactDOM.render(
-	<Provider store={store}>
-		<ConnectedApp />
-	</Provider>,
-	document.getElementById("root")
+  <Provider store={store}>
+    <ConnectedApp />
+  </Provider>,
+  document.getElementById("root")
 );
 registerServiceWorker();
