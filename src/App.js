@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import Navbar from "./components/Navbar.js";
-import Home from "./components/Home";
-import About from "./components/About";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
 import { BrowserRouter, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import NextProfileButton from "./components/NextProfileButton";
@@ -47,15 +47,15 @@ class App extends Component {
             <div className="content">
               <Route
                 exact
-                path='/portfolio'
+                path="/portfolio"
                 render={() => <Home home={currentProfile.home} />}
               />
               <Route
-                path='/portfolio/About'
+                path="/portfolio/About"
                 render={() => <About about={currentProfile.about} />}
               />
               <Route
-                path='/portfolio/Projects'
+                path="/portfolio/Projects"
                 render={() => (
                   <Projects
                     projects={currentProfile.projects}
@@ -64,7 +64,7 @@ class App extends Component {
                 )}
               />
               <Route
-                path='/portfolio/Contact'
+                path="/portfolio/Contact"
                 render={() => <Contact contact={currentProfile.contact} />}
               />
             </div>

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ProjectCard from "./ProjectCard";
+import ProjectCard from "../../components/ProjectCard/ProjectCard";
 
 export default class Projects extends Component {
 	render() {
