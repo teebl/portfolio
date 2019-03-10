@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import styled from "styled-components";
 
@@ -24,20 +24,21 @@ const ProjectsTitle = styled.h2`
   }
 `;
 
-export default class Projects extends Component {
-  render() {
-    return (
-      <StyledProjects>
-        <ProjectsTitle>Projects</ProjectsTitle>
-        <ProjectsBody className="ProjectsBody">
-          {this.props.projects.map(p => (
-            <ProjectCard
-              card={p}
-              profileClassName={this.props.profileClassName}
-            />
-          ))}
-        </ProjectsBody>
-      </StyledProjects>
-    );
-  }
-}
+const renderProjectCards = projects => (
+  <ProjectsBody className="ProjectsBody">
+    {Object.values(projects).map((p, i) => (
+      <ProjectCard key={i} card={p} />
+    ))}
+  </ProjectsBody>
+);
+
+const Projects = projects => {
+  return (
+    <StyledProjects>
+      <ProjectsTitle>Projects</ProjectsTitle>
+      {renderProjectCards(projects)}
+    </StyledProjects>
+  );
+};
+
+export default Projects;

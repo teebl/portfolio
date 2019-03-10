@@ -46,52 +46,32 @@ class App extends Component {
   }
 
   render() {
-    const index = this.props.data.currentProfileIndex;
-    const currentProfile = this.props.data.profiles[index];
-    const profileClassName = currentProfile.profileClassName;
-
-    //nothing to see here
-    if (index) {
-      document.body.style = "background: red;";
-    } else {
-      document.body.style = "background: white;";
-    }
-
+    const { data } = this.props;
+    const index = data.currentProfileIndex;
+    const { home, about, projects, contact } = data.profiles[index];
     return (
       <BrowserRouter>
         <ScrollToTop>
           <StyledApp>
-            <NextProfileButton
-              buttonPress={this.buttonPress}
-              profileClassName={profileClassName}
-            />
-            <Navbar
-              profile={currentProfile}
-              buttonPress={this.buttonPress}
-              profileClassName={profileClassName}
-            />
+            <NextProfileButton buttonPress={this.buttonPress} />
+            <Navbar buttonPress={this.buttonPress} />
             <Content>
               <Route
                 exact
                 path="/portfolio"
-                render={() => <Home home={currentProfile.home} />}
+                render={() => <Home {...home} />}
               />
               <Route
                 path="/portfolio/About"
-                render={() => <About about={currentProfile.about} />}
+                render={() => <About {...about} />}
               />
               <Route
                 path="/portfolio/Projects"
-                render={() => (
-                  <Projects
-                    projects={currentProfile.projects}
-                    profileClassName={profileClassName}
-                  />
-                )}
+                render={() => <Projects {...projects} />}
               />
               <Route
                 path="/portfolio/Contact"
-                render={() => <Contact contact={currentProfile.contact} />}
+                render={() => <Contact {...contact} />}
               />
             </Content>
           </StyledApp>

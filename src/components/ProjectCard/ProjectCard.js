@@ -45,27 +45,31 @@ const Tag = styled.div`
   line-height: 100%;
 `;
 
+const renderBody = body => (
+  <Body>
+    {body.map(p => (
+      <p>{p}</p>
+    ))}
+  </Body>
+);
+
+const renderTags = tags => tags.map(t => <Tag>{t}</Tag>);
+
 function ProjectCard(props) {
-  const card = props.card;
-  const thumbnail = process.env.PUBLIC_URL + card.thumbnail;
-  const profileClassName = props.profileClassName;
+  const { body, link, summary, tags, thumbnail, title } = props.card;
+  const thumbnailAddress = process.env.PUBLIC_URL + thumbnail;
+
   return (
     <StyledProjectCard>
       <ProjectCardImage>
-        <a href={card.link} target="_blank">
-          <StyledImage src={thumbnail} alt={card.title + " thumbnail"} />
+        <a href={link} target="_blank">
+          <StyledImage src={thumbnailAddress} alt={`${title} thumbnail`} />
         </a>
       </ProjectCardImage>
-      <Title>{card.title}</Title>
-      <Summary>{card.summary}</Summary>
-      <Body className={profileClassName + " ProjectCardBody"}>
-        {card.body.map(p => (
-          <p>{p}</p>
-        ))}
-      </Body>
-      {card.tags.map(t => (
-        <Tag className={profileClassName + " ProjectCardTag"}>{t}</Tag>
-      ))}
+      <Title>{title}</Title>
+      <Summary>{summary}</Summary>
+      {renderBody(body)}
+      {renderTags(tags)}
     </StyledProjectCard>
   );
 }

@@ -7,7 +7,7 @@ const StyledIconLink = styled.a`
   }
 `;
 
-function Icon(props) {
+const Icon = props => {
   const icon = props.icon;
 
   if (icon.link !== "") {
@@ -35,7 +35,7 @@ function Icon(props) {
       </svg>
     );
   }
-}
+};
 
 Icon.defaultProps = {
   size: "60"

@@ -33,19 +33,23 @@ const AboutText = styled.div`
   max-width: 800px;
 `;
 
-export default class About extends Component {
-  render() {
-    return (
-      <StyledAbout>
-        <AboutTitle>
-          <h2>About</h2>
-        </AboutTitle>
-        <AboutText>
-          {this.props.about.text.map(p => (
-            <p>{p}</p>
-          ))}
-        </AboutText>
-      </StyledAbout>
-    );
-  }
-}
+const renderAboutBody = text => (
+  <AboutText>
+    {text.map((p, i) => (
+      <p key={i}>{p}</p>
+    ))}
+  </AboutText>
+);
+
+const About = ({ text }) => {
+  return (
+    <StyledAbout>
+      <AboutTitle>
+        <h2>About</h2>
+      </AboutTitle>
+      {renderAboutBody(text)}
+    </StyledAbout>
+  );
+};
+
+export default About;

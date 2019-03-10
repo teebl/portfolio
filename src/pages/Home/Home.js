@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 
 const StyledHome = styled.div`
@@ -41,20 +41,18 @@ const SynopsisText = styled.div`
   padding: 2px;
 `;
 
-export default class Home extends Component {
-  render() {
-    //webpack was not accepting local images on build if their addresses were passed from props
-    //this fix works for my needs, but another solution would be necessary should the images be user-specific
-    const profilePic = process.env.PUBLIC_URL + this.props.home.image;
+const Home = ({ description, image, name }) => {
+  const profilePicAddress = process.env.PUBLIC_URL + image;
 
-    return (
-      <StyledHome>
-        <ProfilePicture src={profilePic} alt="Trevor" />
-        <SynopsisText>
-          <h2>{this.props.home.name}</h2>
-          <h3>{this.props.home.description}</h3>
-        </SynopsisText>
-      </StyledHome>
-    );
-  }
-}
+  return (
+    <StyledHome>
+      <ProfilePicture src={profilePicAddress} alt="Trevor" />
+      <SynopsisText>
+        <h2>{name}</h2>
+        <h3>{description}</h3>
+      </SynopsisText>
+    </StyledHome>
+  );
+};
+
+export default Home;

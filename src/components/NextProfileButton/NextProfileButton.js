@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 
 const StyledNextProfileButton = styled.div`
@@ -6,7 +6,6 @@ const StyledNextProfileButton = styled.div`
   bottom: 20px;
   left: 5px;
   color: black;
-  max-height: $navbar-dimension;
   vertical-align: middle;
   border: 1px solid lightgrey;
   font-size: 10px;
@@ -29,23 +28,16 @@ const StyledNextProfileButton = styled.div`
   }
 `;
 
-export default class NextProfileButton extends Component {
-  constructor(props) {
-    super(props);
+const NextProfileButton = props => {
+  const buttonPressHandler = e => {
+    props.buttonPress();
+  };
 
-    this.buttonPressHandler = this.buttonPressHandler.bind(this);
-  }
+  return (
+    <StyledNextProfileButton onClick={buttonPressHandler}>
+      HULKAMANIA
+    </StyledNextProfileButton>
+  );
+};
 
-  buttonPressHandler(e) {
-    this.props.buttonPress();
-  }
-
-  render() {
-    const profileClassName = this.props.profileClassName;
-    return (
-      <StyledNextProfileButton onClick={this.buttonPressHandler}>
-        HULKAMANIA
-      </StyledNextProfileButton>
-    );
-  }
-}
+export default NextProfileButton;

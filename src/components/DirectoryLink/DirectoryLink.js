@@ -30,12 +30,10 @@ const StyledDirectoryLink = styled(NavLink).attrs({
   }
 `;
 
-const DirectoryLink = props => {
-  return (
-    <StyledDirectoryLink exact="true" to={props.directory}>
-      {props.page}
-    </StyledDirectoryLink>
-  );
-};
+const DirectoryLink = props => (
+  <StyledDirectoryLink exact="true" to={props.directory}>
+    {props.page}
+  </StyledDirectoryLink>
+);
 
 export default DirectoryLink;

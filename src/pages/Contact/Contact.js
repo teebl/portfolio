@@ -21,17 +21,19 @@ const ContactTitle = styled.div`
   grid-column: span 2;
 `;
 
-export default class Contact extends Component {
-  render() {
-    return (
-      <StyledContact>
-        <ContactTitle>
-          <h2>Contact</h2>
-        </ContactTitle>
-        {this.props.contact.map(i => (
-          <Icon icon={i} />
-        ))}
-      </StyledContact>
-    );
-  }
-}
+const renderIcons = contacts =>
+  Object.values(contacts).map((image, i) => <Icon icon={image} key={image} />);
+
+const Contact = props => {
+  console.log(props);
+  return (
+    <StyledContact>
+      <ContactTitle>
+        <h2>Contact</h2>
+      </ContactTitle>
+      {renderIcons(props)}
+    </StyledContact>
+  );
+};
+
+export default Contact;

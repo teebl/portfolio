@@ -46,26 +46,20 @@ const CollapseButton = styled.div`
   }
 `;
 
-export default class Navbar extends Component {
+class Navbar extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       sidebarCollapse: true
     };
-
-    this.collapseSwitch = this.collapseSwitch.bind(this);
   }
 
-  collapseSwitch() {
+  collapseSwitch = () => {
     this.setState({ sidebarCollapse: !this.state.sidebarCollapse });
-  }
+  };
 
   render() {
-    const collapseClassName = this.state.sidebarCollapse
-      ? "sidebarCollapsed"
-      : "sidebarExpanded";
-
     return (
       <StyledNavbar>
         <CollapseButton onClick={this.collapseSwitch}>
@@ -84,3 +78,5 @@ export default class Navbar extends Component {
     );
   }
 }
+
+export default Navbar;
