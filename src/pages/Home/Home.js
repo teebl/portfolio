@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import ProgressiveImage from "../../components/ProgressiveImage";
 
 const StyledHome = styled.div`
   height: 100%;
@@ -21,14 +22,14 @@ const StyledHome = styled.div`
   }
 `;
 
-const ProfilePicture = styled.img`
+const ProfilePicture = styled.div`
   display: block;
   margin: auto;
   height: 300px;
   width: 300px;
+  overflow: hidden;
   border-radius: 300px;
   border: 1px solid black;
-  background-color: lightgrey;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 
   @media (max-width: 700px) {
@@ -46,7 +47,9 @@ const Home = ({ description, image, name }) => {
 
   return (
     <StyledHome>
-      <ProfilePicture src={profilePicAddress} alt="Trevor" />
+      <ProfilePicture alt="Trevor">
+        <ProgressiveImage />
+      </ProfilePicture>
       <SynopsisText>
         <h2>{name}</h2>
         <h3>{description}</h3>

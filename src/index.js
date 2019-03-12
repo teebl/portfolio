@@ -27,9 +27,6 @@ const ConnectedApp = connect(
   mapDispatchToProps
 )(App);
 
-console.log("store.getState() in index.js incoming");
-console.dir(store.getState());
-
 ReactDOM.render(
   <Provider store={store}>
     <ConnectedApp />

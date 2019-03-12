@@ -7,7 +7,7 @@ import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import { BrowserRouter, Route } from "react-router-dom";
-import ScrollToTop from "./components/ScrollToTop";
+import ScrollToTop from "./components/hoc/ScrollToTop";
 import NextProfileButton from "./components/NextProfileButton";
 
 const StyledApp = styled.div`
@@ -57,7 +57,7 @@ class App extends Component {
             <Navbar buttonPress={this.buttonPress} />
             <Content>
               <Route
-                exact
+                exact={true}
                 path="/portfolio"
                 render={() => <Home {...home} />}
               />
