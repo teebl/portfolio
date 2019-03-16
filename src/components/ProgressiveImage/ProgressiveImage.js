@@ -12,11 +12,9 @@ const ImageWrapper = styled.div`
 
 const StyledImage = styled.img`
   width: 100%;
-  transform: scale(1.1);
-  transition: opacity 8s ease-in-out;
   top: 0;
   left: 0;
-  position: ${({ full }) => (full ? "absolute" : "relative")};
+  position: absolute;
 `;
 
 class ProgressiveImage extends React.Component {
@@ -42,29 +40,28 @@ class ProgressiveImage extends React.Component {
     }
   }
 
-  renderThumbnail = (ready, srcThumbnail) => {
+  renderPlaceholder = (ready, SvgPlaceholder) => {
     return (
       <FadeOut toggle={ready}>
-        <StyledImage ready={ready} src={srcThumbnail} />
+        <SvgPlaceholder />
       </FadeOut>
     );
   };
 
   render() {
-    const { srcImage, srcThumbnail } = this.props;
+    const { srcImage, SvgPlaceholder } = this.props;
     const { ready } = this.state;
     return (
-      <ImageWrapper>
-        <StyledImage full src={srcImage} />
-        {this.renderThumbnail(ready, srcThumbnail)}
-      </ImageWrapper>
+      <div>
+        <ImageWrapper>
+          <StyledImage full src={srcImage} />
+          {this.renderPlaceholder(ready, SvgPlaceholder)}
+        </ImageWrapper>
+      </div>
     );
   }
 }
 
-ProgressiveImage.defaultProps = {
-  srcImage: process.env.PUBLIC_URL + "/images/profile.jpg",
-  srcThumbnail: process.env.PUBLIC_URL + "/images/profile-thumb.svg"
-};
+ProgressiveImage.defaultProps = {};
 
 export default withinIntersectionObserver(ProgressiveImage);

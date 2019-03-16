@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import ProgressiveImage from "../../components/ProgressiveImage";
+import SvgProfile from "../../resources/svg/placeProfile.js";
 
 const StyledHome = styled.div`
   height: 100%;
@@ -43,12 +44,15 @@ const SynopsisText = styled.div`
 `;
 
 const Home = ({ description, image, name }) => {
-  const profilePicAddress = process.env.PUBLIC_URL + image;
+  const srcProfilePic = process.env.PUBLIC_URL + image;
 
   return (
     <StyledHome>
       <ProfilePicture alt="Trevor">
-        <ProgressiveImage />
+        <ProgressiveImage
+          srcImage={srcProfilePic}
+          SvgPlaceholder={SvgProfile}
+        />
       </ProfilePicture>
       <SynopsisText>
         <h2>{name}</h2>
