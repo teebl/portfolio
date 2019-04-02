@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Switch } from "react-router";
-import SlideInOut from "./SlideInOut";
+import SlideInOut from "../animations/SlideInOut";
 
 const AnimatedSwitch = (CustomSwitch, AnimationComponent) => ({ children }) => {
   return (

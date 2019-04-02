@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import withinIntersectionObserver from "../hoc/withinIntersectionObserver";
-import FadeOut from "../hoc/FadeOut";
+import FadeOut from "../animations/FadeOut";
 
 const ImageWrapper = styled.div`
   height: 100%;
