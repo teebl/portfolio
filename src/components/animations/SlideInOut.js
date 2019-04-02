@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useSpring, animated } from "react-spring";
+import { useSpring, animated, config } from "react-spring";
 import { LOCATIONS } from "../../App";
 
 const getLocationIndex = path =>
@@ -26,7 +26,8 @@ const SlideInOut = props => {
 
   const animateEntry = useSpring({
     transform: `translateY(${transitioning ? (isAscending ? -100 : 100) : 0}%)`,
-    opacity: transitioning ? 0 : 1
+    opacity: transitioning ? 0 : 1,
+    config: config.fast
   });
 
   const animateExit = useSpring({
@@ -35,7 +36,8 @@ const SlideInOut = props => {
     onRest: () => {
       setTransitioning(false);
       setPrevPage(null);
-    }
+    },
+    config: config.stiff
   });
 
   const animateFadeInOnMount = useSpring({

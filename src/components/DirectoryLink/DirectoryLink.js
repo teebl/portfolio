@@ -4,29 +4,22 @@ import styled from "styled-components";
 
 const activeClassName = "activeLink";
 
-const StyledDirectoryLink = styled(NavLink).attrs({
-  activeClassName
-})`
-  display:block;
+const StyledDirectoryLink = styled(NavLink)`
+  display: block;
   text-decoration: none;
-  color: white;
-  background-color: rgba(255,255,255, 0.8);
+  background-color: transparent;
   border-right: 0px;
   color: black;
-  max-height: 80px;
+  line-height: 40px;
+  height: 40px;
   border-right: 2px solid rgba(0, 0, 0, 0);
   font-size: 12px;
   font-family: "Work Sans", sans-serif;
   letter-spacing: 3px;
   text-align: right;
-  margin: 5px;
-  padding: 5px; }
 
   :hover {
-    color: orange; }
-
-  &.${activeClassName} {
-    border-right: 2px solid black;
+    color: orange;
   }
 `;
 

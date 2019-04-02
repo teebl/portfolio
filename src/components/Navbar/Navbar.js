@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import DirectoryLink from "../DirectoryLink";
 import Icon from "../Icon";
+import ActiveTab from "../ActiveTab";
 import bars from "../../resources/bars";
 import styled from "styled-components";
 
@@ -26,6 +27,7 @@ const StyledNavbar = styled.div`
 `;
 
 const NavbarLinks = styled.div`
+  position: relative;
   @media (max-width: 700px) {
     ${({ collapsed }) => collapsed && "display:none"};
   }
@@ -69,6 +71,7 @@ class Navbar extends Component {
           onClick={this.collapseSwitch}
           collapsed={this.state.sidebarCollapse}
         >
+          <ActiveTab />
           <DirectoryLink page="HOME" directory="/portfolio" />
           <DirectoryLink page="ABOUT" directory="/portfolio/About" />
           <DirectoryLink page="PROJECTS" directory="/portfolio/Projects" />
