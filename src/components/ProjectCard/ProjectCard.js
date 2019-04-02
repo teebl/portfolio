@@ -47,20 +47,20 @@ const Tag = styled.div`
 
 const renderBody = body => (
   <Body>
-    {body.map(p => (
-      <p>{p}</p>
+    {body.map((p, i) => (
+      <p key={i}>{p}</p>
     ))}
   </Body>
 );
 
-const renderTags = tags => tags.map(t => <Tag>{t}</Tag>);
+const renderTags = tags => tags.map(t => <Tag key={t}>{t}</Tag>);
 
 function ProjectCard(props) {
   const { body, link, summary, tags, thumbnail, title } = props.card;
   const thumbnailAddress = process.env.PUBLIC_URL + thumbnail;
 
   return (
-    <StyledProjectCard>
+    <StyledProjectCard key={link}>
       <ProjectCardImage>
         <a href={link} target="_blank">
           <StyledImage src={thumbnailAddress} alt={`${title} thumbnail`} />

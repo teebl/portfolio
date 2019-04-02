@@ -9,6 +9,14 @@ import Contact from "./pages/Contact";
 import { BrowserRouter, Route } from "react-router-dom";
 import ScrollToTop from "./components/hoc/ScrollToTop";
 import NextProfileButton from "./components/NextProfileButton";
+import AnimatedSwitch from "./components/hoc/AnimatedSwitch";
+
+export const LOCATIONS = [
+  { path: "/portfolio" },
+  { path: "/portfolio/About" },
+  { path: "/portfolio/Projects" },
+  { path: "/portfolio/Contact" }
+];
 
 const StyledApp = styled.div`
   height: 100%;
@@ -23,8 +31,10 @@ const StyledApp = styled.div`
 `;
 
 const Content = styled.div`
-  height: 100%;
+  overflow: hidden;
+  height: 100vh;
   margin: 0px 40px 0px 150px;
+  display: grid;
 
   @media (max-width: 700px) {
     grid-column-start: 1;
@@ -56,23 +66,25 @@ class App extends Component {
             <NextProfileButton buttonPress={this.buttonPress} />
             <Navbar buttonPress={this.buttonPress} />
             <Content>
-              <Route
-                exact={true}
-                path="/portfolio"
-                render={() => <Home {...home} />}
-              />
-              <Route
-                path="/portfolio/About"
-                render={() => <About {...about} />}
-              />
-              <Route
-                path="/portfolio/Projects"
-                render={() => <Projects {...projects} />}
-              />
-              <Route
-                path="/portfolio/Contact"
-                render={() => <Contact {...contact} />}
-              />
+              <AnimatedSwitch>
+                <Route
+                  exact
+                  path="/portfolio"
+                  render={() => <Home {...home} />}
+                />
+                <Route
+                  path="/portfolio/About"
+                  render={() => <About {...about} />}
+                />
+                <Route
+                  path="/portfolio/Projects"
+                  render={() => <Projects {...projects} />}
+                />
+                <Route
+                  path="/portfolio/Contact"
+                  render={() => <Contact {...contact} />}
+                />
+              </AnimatedSwitch>
             </Content>
           </StyledApp>
         </ScrollToTop>

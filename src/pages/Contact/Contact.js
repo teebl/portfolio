@@ -22,18 +22,15 @@ const ContactTitle = styled.div`
 `;
 
 const renderIcons = contacts =>
-  Object.values(contacts).map((image, i) => <Icon icon={image} key={image} />);
+  Object.values(contacts).map((image, i) => <Icon icon={image} key={i} />);
 
-const Contact = props => {
-  console.log(props);
-  return (
-    <StyledContact>
-      <ContactTitle>
-        <h2>Contact</h2>
-      </ContactTitle>
-      {renderIcons(props)}
-    </StyledContact>
-  );
-};
+const Contact = props => (
+  <StyledContact>
+    <ContactTitle>
+      <h2>Contact</h2>
+    </ContactTitle>
+    {renderIcons(props)}
+  </StyledContact>
+);
 
 export default Contact;
