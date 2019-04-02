@@ -15,13 +15,14 @@ const StyledActiveTab = styled(animated.div)`
 `;
 
 const ActiveTab = props => {
-  const pathIndex = LOCATIONS.findIndex(
+  let pathIndex = LOCATIONS.findIndex(
     item => item.path === props.location.pathname
   );
+  pathIndex = pathIndex === -1 ? 0 : pathIndex;
 
   const slideAnimation = useSpring({
     top: `${pathIndex * 40}px`,
-    config: { tension: 200, friction: 90 }
+    config: { tension: 220, friction: 80 }
   });
 
   return <StyledActiveTab style={slideAnimation} />;
