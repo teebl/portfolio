@@ -9,7 +9,7 @@ const StyledNavbar = styled.div`
   position: fixed;
   top: 50%;
   transform: translateY(-50%);
-  width: 110px;
+  width: 130px;
 
   @media (max-width: 700px) {
     position: fixed;
@@ -28,6 +28,7 @@ const StyledNavbar = styled.div`
 
 const NavbarLinks = styled.div`
   position: relative;
+
   @media (max-width: 700px) {
     ${({ collapsed }) => collapsed && "display:none"};
   }

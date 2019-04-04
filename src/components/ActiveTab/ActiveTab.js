@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { animated, config, useSpring } from "react-spring";
+import { animated, useSpring } from "react-spring";
 import { LOCATIONS } from "../../App";
 import { withRouter } from "react-router";
 

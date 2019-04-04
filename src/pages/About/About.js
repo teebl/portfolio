@@ -1,10 +1,12 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 
 const StyledAbout = styled.div`
-  height: 100%;
+  height: 100vh;
+  overflow-y: scroll;
   display: grid;
   margin: auto;
+  padding-right: 80px;
   grid-gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   align-items: center;

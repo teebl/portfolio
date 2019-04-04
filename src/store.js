@@ -10,9 +10,6 @@ var data = require("./resources/data.json");
 
 const defaultState = { ...data };
 
-console.log("defaultState incoming (store.js)");
-console.dir(defaultState);
-
 const store = createStore(rootReducer);
 
 export default store;

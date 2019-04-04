@@ -33,7 +33,7 @@ const StyledApp = styled.div`
 const Content = styled.div`
   overflow: hidden;
   height: 100vh;
-  margin: 0px 40px 0px 150px;
+  margin: 0px 0px 0px 150px;
   display: grid;
 
   @media (max-width: 700px) {

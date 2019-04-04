@@ -62,7 +62,7 @@ function ProjectCard(props) {
   return (
     <StyledProjectCard key={link}>
       <ProjectCardImage>
-        <a href={link} target="_blank">
+        <a href={link} target="_blank" rel="noopener noreferrer">
           <StyledImage src={thumbnailAddress} alt={`${title} thumbnail`} />
         </a>
       </ProjectCardImage>
