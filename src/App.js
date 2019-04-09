@@ -63,7 +63,6 @@ class App extends Component {
       <BrowserRouter>
         <ScrollToTop>
           <StyledApp>
-            <NextProfileButton buttonPress={this.buttonPress} />
             <Navbar buttonPress={this.buttonPress} />
             <Content>
               <AnimatedSwitch>
